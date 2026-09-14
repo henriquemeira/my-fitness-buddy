@@ -196,6 +196,10 @@ CREATE INDEX idx_exercises_is_active ON exercises(is_active);
 -- Profiles
 ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
 
+-- Política para permitir insert pelo trigger (sem restrição)
+CREATE POLICY "Allow insert for new users" ON profiles
+  FOR INSERT WITH CHECK (true);
+
 CREATE POLICY "Users can view own profile" ON profiles
   FOR SELECT USING (auth.uid() = user_id);
 
