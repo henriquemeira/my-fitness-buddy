@@ -54,14 +54,14 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-zinc-50 to-zinc-100 dark:from-zinc-950 dark:to-zinc-900">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-zinc-50 to-zinc-100 from-zinc-950 to-zinc-900">
       <div className="w-full max-w-sm space-y-8">
         <div className="flex flex-col items-center">
-          <div className="w-16 h-16 rounded-2xl bg-zinc-900 dark:bg-white flex items-center justify-center mb-4">
-            <Dumbbell className="w-8 h-8 text-white dark:text-zinc-900" />
+          <div className="w-16 h-16 rounded-2xl bg-zinc-900 bg-white flex items-center justify-center mb-4">
+            <Dumbbell className="w-8 h-8 text-white text-zinc-900" />
           </div>
-          <h1 className="text-2xl font-bold text-zinc-900 dark:text-white">Criar Conta</h1>
-          <p className="text-zinc-500 dark:text-zinc-400 mt-1">Comece sua jornada fitness</p>
+          <h1 className="text-2xl font-bold text-zinc-900 text-white">Criar Conta</h1>
+          <p className="text-zinc-500 text-zinc-400 mt-1">Comece sua jornada fitness</p>
         </div>
 
         <form onSubmit={handleRegister} className="space-y-4">
@@ -95,7 +95,7 @@ export default function RegisterPage() {
           />
           
           {error && (
-            <p className="text-sm text-red-500 bg-red-50 dark:bg-red-950/30 p-3 rounded-lg">
+            <p className="text-sm text-red-500 bg-red-50 bg-red-950/30 p-3 rounded-lg">
               {error}
             </p>
           )}
@@ -105,9 +105,9 @@ export default function RegisterPage() {
           </Button>
         </form>
 
-        <p className="text-center text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-center text-sm text-zinc-500 text-zinc-400">
           Já tem conta?{' '}
-          <Link href="/auth/login" className="font-medium text-zinc-900 dark:text-white hover:underline">
+          <Link href="/auth/login" className="font-medium text-zinc-900 text-white hover:underline">
             Entrar
           </Link>
         </p>

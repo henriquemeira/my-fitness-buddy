@@ -55,7 +55,7 @@ export default function WorkoutsPage() {
     <div className="p-4 space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-zinc-900 dark:text-white">Meus Treinos</h1>
+        <h1 className="text-2xl font-bold text-zinc-900 text-white">Meus Treinos</h1>
         <Link href="/workouts/new">
           <Button size="sm">
             <Plus className="w-4 h-4 mr-1" />
@@ -73,14 +73,14 @@ export default function WorkoutsPage() {
         <Card>
           <CardContent className="py-12">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-zinc-100 dark:bg-zinc-800 mx-auto flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-zinc-100 bg-zinc-800 mx-auto flex items-center justify-center">
                 <Dumbbell className="w-8 h-8 text-zinc-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-zinc-900 dark:text-white">
+                <h3 className="font-semibold text-zinc-900 text-white">
                   Nenhum treino criado
                 </h3>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                <p className="text-sm text-zinc-500 text-zinc-400 mt-1">
                   Crie seu primeiro treino para começar
                 </p>
               </div>
@@ -97,14 +97,14 @@ export default function WorkoutsPage() {
         <div className="space-y-3">
           {templates.map((template) => (
             <Link key={template.id} href={`/workouts/${template.id}`}>
-              <Card className="border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors">
+              <Card className="border-zinc-200 border-zinc-800 hover:bg-zinc-50 hover:bg-zinc-900 transition-colors">
                 <CardContent className="py-4">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
-                      <h3 className="font-semibold text-zinc-900 dark:text-white">
+                      <h3 className="font-semibold text-zinc-900 text-white">
                         {template.name}
                       </h3>
-                      <div className="flex items-center gap-3 mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                      <div className="flex items-center gap-3 mt-1 text-sm text-zinc-500 text-zinc-400">
                         <span className="flex items-center gap-1">
                           <Dumbbell className="w-3.5 h-3.5" />
                           {template.workout_template_exercises.length} exercícios
@@ -117,7 +117,7 @@ export default function WorkoutsPage() {
                         )}
                       </div>
                       {template.description && (
-                        <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-1">
+                        <p className="text-sm text-zinc-500 text-zinc-400 mt-2 line-clamp-1">
                           {template.description}
                         </p>
                       )}

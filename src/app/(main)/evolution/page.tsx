@@ -164,7 +164,7 @@ export default function EvolutionPage() {
 
   return (
     <div className="p-4 space-y-6">
-      <h1 className="text-2xl font-bold text-zinc-900 dark:text-white">Evolução</h1>
+      <h1 className="text-2xl font-bold text-zinc-900 text-white">Evolução</h1>
 
       {/* Filtro de período */}
       <div className="flex gap-2 overflow-x-auto pb-2">
@@ -181,7 +181,7 @@ export default function EvolutionPage() {
             className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
               timeRange === option.value
                 ? 'bg-zinc-900 text-white'
-                : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'
+                : 'bg-zinc-100 bg-zinc-800 text-zinc-600 text-zinc-400'
             }`}
           >
             {option.label}
@@ -200,8 +200,8 @@ export default function EvolutionPage() {
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
-                    <Dumbbell className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                  <div className="w-10 h-10 rounded-lg bg-zinc-100 bg-zinc-800 flex items-center justify-center">
+                    <Dumbbell className="w-5 h-5 text-zinc-600 text-zinc-400" />
                   </div>
                   <div>
                     <p className="text-2xl font-bold">{stats.totalWorkouts}</p>
@@ -214,8 +214,8 @@ export default function EvolutionPage() {
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                  <div className="w-10 h-10 rounded-lg bg-zinc-100 bg-zinc-800 flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-zinc-600 text-zinc-400" />
                   </div>
                   <div>
                     <p className="text-2xl font-bold">{stats.currentStreak}</p>
@@ -228,8 +228,8 @@ export default function EvolutionPage() {
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
-                    <Calendar className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                  <div className="w-10 h-10 rounded-lg bg-zinc-100 bg-zinc-800 flex items-center justify-center">
+                    <Calendar className="w-5 h-5 text-zinc-600 text-zinc-400" />
                   </div>
                   <div>
                     <p className="text-2xl font-bold">{stats.thisWeekWorkouts}</p>
@@ -242,8 +242,8 @@ export default function EvolutionPage() {
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
-                    <Award className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                  <div className="w-10 h-10 rounded-lg bg-zinc-100 bg-zinc-800 flex items-center justify-center">
+                    <Award className="w-5 h-5 text-zinc-600 text-zinc-400" />
                   </div>
                   <div>
                     <p className="text-2xl font-bold">{topExercises.length}</p>
@@ -268,7 +268,7 @@ export default function EvolutionPage() {
                 <div className="space-y-4">
                   {topExercises.map((ex, index) => (
                     <div key={ex.exercise_id} className="flex items-center gap-3">
-                      <span className="w-6 h-6 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-sm font-medium">
+                      <span className="w-6 h-6 rounded-full bg-zinc-100 bg-zinc-800 flex items-center justify-center text-sm font-medium">
                         {index + 1}
                       </span>
                       <div className="flex-1">
@@ -296,7 +296,7 @@ export default function EvolutionPage() {
                   return (
                     <div
                       key={i}
-                      className="flex-1 bg-zinc-200 dark:bg-zinc-800 rounded-t"
+                      className="flex-1 bg-zinc-200 bg-zinc-800 rounded-t"
                       style={{ height: `${height}%` }}
                     />
                   )

@@ -312,7 +312,7 @@ export default function StartWorkoutPage() {
   if (!sessionId) {
     return (
       <div className="min-h-screen bg-background">
-        <div className="sticky top-0 bg-background border-b border-zinc-200 dark:border-zinc-800 p-4">
+        <div className="sticky top-0 bg-background border-b border-zinc-200 border-zinc-800 p-4">
           <div className="flex items-center justify-between max-w-lg mx-auto">
             <Link href="/today">
               <Button variant="ghost" size="icon">
@@ -329,7 +329,7 @@ export default function StartWorkoutPage() {
             <CardContent className="pt-6">
               <h2 className="text-2xl font-bold mb-2">{template.name}</h2>
               {template.description && (
-                <p className="text-zinc-500 dark:text-zinc-400 mb-4">
+                <p className="text-zinc-500 text-zinc-400 mb-4">
                   {template.description}
                 </p>
               )}
@@ -345,9 +345,9 @@ export default function StartWorkoutPage() {
             {template.exercises.map((ex, index) => (
               <div
                 key={ex.id}
-                className="flex items-center gap-3 p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900"
+                className="flex items-center gap-3 p-3 rounded-lg bg-zinc-50 bg-zinc-900"
               >
-                <span className="w-6 h-6 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-xs font-medium">
+                <span className="w-6 h-6 rounded-full bg-zinc-200 bg-zinc-800 flex items-center justify-center text-xs font-medium">
                   {index + 1}
                 </span>
                 <div className="flex-1">
@@ -374,7 +374,7 @@ export default function StartWorkoutPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="sticky top-0 bg-background border-b border-zinc-200 dark:border-zinc-800 p-4">
+      <div className="sticky top-0 bg-background border-b border-zinc-200 border-zinc-800 p-4">
         <div className="flex items-center justify-between max-w-lg mx-auto">
           <span className="text-sm text-zinc-500">
             {currentExerciseIndex + 1}/{template.exercises.length}
@@ -389,7 +389,7 @@ export default function StartWorkoutPage() {
       <div className="max-w-lg mx-auto p-4">
         {/* Timer de descanso */}
         {isResting && (
-          <Card className="mb-6 bg-zinc-900 dark:bg-zinc-800">
+          <Card className="mb-6 bg-zinc-900 bg-zinc-800">
             <CardContent className="py-6">
               <div className="text-center">
                 <p className="text-sm text-zinc-400 mb-2">Descanso</p>
@@ -414,7 +414,7 @@ export default function StartWorkoutPage() {
 
           {/* Info da última sessão */}
           {currentExercise.previous_sets && currentExercise.previous_sets.length > 0 && (
-            <Card className="bg-zinc-50 dark:bg-zinc-900">
+            <Card className="bg-zinc-50 bg-zinc-900">
               <CardContent className="py-3">
                 <p className="text-sm text-zinc-500 mb-2">Última vez:</p>
                 <div className="flex gap-4">
@@ -434,11 +434,11 @@ export default function StartWorkoutPage() {
 
           {/* Meta */}
           <div className="flex items-center gap-4 text-sm">
-            <span className="px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800">
+            <span className="px-3 py-1 rounded-full bg-zinc-100 bg-zinc-800">
               Meta: {currentExercise.sets}×{currentExercise.reps_min}-{currentExercise.reps_max}
             </span>
             {currentExercise.target_rir !== null && (
-              <span className="px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800">
+              <span className="px-3 py-1 rounded-full bg-zinc-100 bg-zinc-800">
                 RIR alvo: {currentExercise.target_rir}
               </span>
             )}
@@ -483,7 +483,7 @@ export default function StartWorkoutPage() {
                       className={`flex-1 h-14 rounded-lg font-medium transition-colors ${
                         rir === r
                           ? 'bg-zinc-900 text-white'
-                          : 'bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700'
+                          : 'bg-zinc-100 bg-zinc-800 hover:bg-zinc-200 hover:bg-zinc-700'
                       }`}
                     >
                       {r}
@@ -520,13 +520,13 @@ export default function StartWorkoutPage() {
                 className={`flex items-center gap-3 p-3 rounded-lg ${
                   index === currentExerciseIndex
                     ? 'bg-zinc-900 text-white'
-                    : 'bg-zinc-50 dark:bg-zinc-900'
+                    : 'bg-zinc-50 bg-zinc-900'
                 }`}
               >
                 <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium ${
                   index === currentExerciseIndex
                     ? 'bg-white/20'
-                    : 'bg-zinc-200 dark:bg-zinc-800'
+                    : 'bg-zinc-200 bg-zinc-800'
                 }`}>
                   {index + 1}
                 </span>

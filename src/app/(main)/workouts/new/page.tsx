@@ -136,7 +136,7 @@ export default function NewWorkoutPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="sticky top-0 bg-background border-b border-zinc-200 dark:border-zinc-800 p-4">
+      <div className="sticky top-0 bg-background border-b border-zinc-200 p-4">
         <div className="flex items-center justify-between max-w-lg mx-auto">
           <Link href="/workouts">
             <Button variant="ghost" size="icon">
@@ -195,7 +195,7 @@ export default function NewWorkoutPage() {
           </CardHeader>
           <CardContent>
             {exercises.length === 0 ? (
-              <div className="text-center py-8 text-zinc-500 dark:text-zinc-400">
+              <div className="text-center py-8 text-zinc-500">
                 <p>Nenhum exercício adicionado</p>
                 <p className="text-sm mt-1">Adicione exercícios ao seu treino</p>
               </div>
@@ -204,12 +204,12 @@ export default function NewWorkoutPage() {
                 {exercises.map((exercise, index) => (
                   <div
                     key={`${exercise.id}-${index}`}
-                    className="p-4 rounded-lg border border-zinc-200 dark:border-zinc-800"
+                    className="p-4 rounded-lg border border-zinc-200"
                   >
                     <div className="flex items-start justify-between mb-3">
                       <div>
                         <h4 className="font-medium">{exercise.name}</h4>
-                        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                        <p className="text-sm text-zinc-500">
                           {exercise.primary_muscle}
                         </p>
                       </div>
@@ -298,7 +298,7 @@ export default function NewWorkoutPage() {
       {showExercisePicker && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-end">
           <div className="bg-background w-full max-h-[80vh] rounded-t-2xl overflow-hidden">
-            <div className="p-4 border-b border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
+            <div className="p-4 border-b border-zinc-200 flex items-center justify-between">
               <h3 className="font-semibold">Selecionar Exercício</h3>
               <Button variant="ghost" size="icon" onClick={() => setShowExercisePicker(false)}>
                 <X className="w-5 h-5" />
@@ -318,7 +318,7 @@ export default function NewWorkoutPage() {
                   <button
                     key={exercise.id}
                     onClick={() => addExercise(exercise)}
-                    className="w-full text-left p-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                    className="w-full text-left p-3 rounded-lg hover:bg-zinc-100 transition-colors"
                   >
                     <p className="font-medium">{exercise.name}</p>
                     <p className="text-sm text-zinc-500">{exercise.primary_muscle}</p>

@@ -141,7 +141,7 @@ export default function ProfilePage() {
     <div className="p-4 space-y-6">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold text-zinc-900 dark:text-white">Perfil</h1>
+        <h1 className="text-2xl font-bold text-zinc-900 text-white">Perfil</h1>
         <Button variant="ghost" size="sm" onClick={handleSignOut}>
           <LogOut className="w-4 h-4 mr-2" />
           Sair
@@ -170,13 +170,13 @@ export default function ProfilePage() {
               onChange={(e) => setBirthDate(e.target.value)}
             />
             <div>
-              <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">
+              <label className="block text-sm font-medium text-zinc-700 text-zinc-300 mb-1.5">
                 Sexo
               </label>
               <select
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
-                className="flex h-12 w-full rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-2 text-sm"
+                className="flex h-12 w-full rounded-lg border border-zinc-200 border-zinc-800 bg-white bg-zinc-950 px-4 py-2 text-sm"
               >
                 <option value="">Selecione</option>
                 <option value="male">Masculino</option>
@@ -225,13 +225,13 @@ export default function ProfilePage() {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">
+            <label className="block text-sm font-medium text-zinc-700 text-zinc-300 mb-1.5">
               Nível de Experiência
             </label>
             <select
               value={experience}
               onChange={(e) => setExperience(e.target.value)}
-              className="flex h-12 w-full rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-2 text-sm"
+              className="flex h-12 w-full rounded-lg border border-zinc-200 border-zinc-800 bg-white bg-zinc-950 px-4 py-2 text-sm"
             >
               <option value="">Selecione</option>
               {experienceLevels.map((level) => (
@@ -243,7 +243,7 @@ export default function ProfilePage() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1.5">
+            <label className="block text-sm font-medium text-zinc-700 text-zinc-300 mb-1.5">
               Dias disponíveis para treino
             </label>
             <div className="flex flex-wrap gap-2">
@@ -254,7 +254,7 @@ export default function ProfilePage() {
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     availableDays.includes(day.value)
                       ? 'bg-zinc-900 text-white'
-                      : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'
+                      : 'bg-zinc-100 bg-zinc-800 text-zinc-600 text-zinc-400'
                   }`}
                 >
                   {day.label}
@@ -282,7 +282,7 @@ export default function ProfilePage() {
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
             placeholder="Alguma observação relevante..."
-            className="flex w-full rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-3 text-sm min-h-[100px]"
+            className="flex w-full rounded-lg border border-zinc-200 border-zinc-800 bg-white bg-zinc-950 px-4 py-3 text-sm min-h-[100px]"
           />
         </CardContent>
       </Card>

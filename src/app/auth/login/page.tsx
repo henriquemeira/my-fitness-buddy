@@ -58,14 +58,14 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-zinc-50 to-zinc-100 dark:from-zinc-950 dark:to-zinc-900">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-zinc-50 to-zinc-100 from-zinc-950 to-zinc-900">
       <div className="w-full max-w-sm space-y-8">
         <div className="flex flex-col items-center">
-          <div className="w-16 h-16 rounded-2xl bg-zinc-900 dark:bg-white flex items-center justify-center mb-4">
-            <Dumbbell className="w-8 h-8 text-white dark:text-zinc-900" />
+          <div className="w-16 h-16 rounded-2xl bg-zinc-900 bg-white flex items-center justify-center mb-4">
+            <Dumbbell className="w-8 h-8 text-white text-zinc-900" />
           </div>
-          <h1 className="text-2xl font-bold text-zinc-900 dark:text-white">FitTrack</h1>
-          <p className="text-zinc-500 dark:text-zinc-400 mt-1">Seu coach de treino pessoal</p>
+          <h1 className="text-2xl font-bold text-zinc-900 text-white">FitTrack</h1>
+          <p className="text-zinc-500 text-zinc-400 mt-1">Seu coach de treino pessoal</p>
         </div>
 
         <form onSubmit={handleLogin} className="space-y-4">
@@ -85,7 +85,7 @@ export default function LoginPage() {
           />
           
           {error && (
-            <p className="text-sm text-red-500 bg-red-50 dark:bg-red-950/30 p-3 rounded-lg">
+            <p className="text-sm text-red-500 bg-red-50 bg-red-950/30 p-3 rounded-lg">
               {error}
             </p>
           )}
@@ -97,10 +97,10 @@ export default function LoginPage() {
 
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-zinc-200 dark:border-zinc-800" />
+            <div className="w-full border-t border-zinc-200 border-zinc-800" />
           </div>
           <div className="relative flex justify-center text-xs uppercase">
-            <span className="bg-zinc-50 dark:bg-zinc-900 px-2 text-zinc-500">ou</span>
+            <span className="bg-zinc-50 bg-zinc-900 px-2 text-zinc-500">ou</span>
           </div>
         </div>
 
@@ -113,9 +113,9 @@ export default function LoginPage() {
           Entrar com Link Mágico
         </Button>
 
-        <p className="text-center text-sm text-zinc-500 dark:text-zinc-400">
+        <p className="text-center text-sm text-zinc-500 text-zinc-400">
           Não tem conta?{' '}
-          <Link href="/auth/register" className="font-medium text-zinc-900 dark:text-white hover:underline">
+          <Link href="/auth/register" className="font-medium text-zinc-900 text-white hover:underline">
             Criar conta
           </Link>
         </p>

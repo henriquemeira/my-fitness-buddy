@@ -53,7 +53,7 @@ export default function HistoryPage() {
 
   return (
     <div className="p-4 space-y-6">
-      <h1 className="text-2xl font-bold text-zinc-900 dark:text-white">Histórico</h1>
+      <h1 className="text-2xl font-bold text-zinc-900 text-white">Histórico</h1>
 
       {loading ? (
         <div className="flex items-center justify-center py-12">
@@ -63,14 +63,14 @@ export default function HistoryPage() {
         <Card>
           <CardContent className="py-12">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-zinc-100 dark:bg-zinc-800 mx-auto flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-zinc-100 bg-zinc-800 mx-auto flex items-center justify-center">
                 <History className="w-8 h-8 text-zinc-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-zinc-900 dark:text-white">
+                <h3 className="font-semibold text-zinc-900 text-white">
                   Nenhum treino realizado
                 </h3>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                <p className="text-sm text-zinc-500 text-zinc-400 mt-1">
                   Complete seu primeiro treino para ver aqui
                 </p>
               </div>
@@ -81,21 +81,21 @@ export default function HistoryPage() {
         <div className="space-y-3">
           {sessions.map((session) => (
             <Link key={session.id} href={`/history/${session.id}`}>
-              <Card className="border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors">
+              <Card className="border-zinc-200 border-zinc-800 hover:bg-zinc-50 hover:bg-zinc-900 transition-colors">
                 <CardContent className="py-4">
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
-                        <h3 className="font-semibold text-zinc-900 dark:text-white">
+                        <h3 className="font-semibold text-zinc-900 text-white">
                           {session.workout_templates?.[0]?.name || 'Treino livre'}
                         </h3>
                         {session.duration && (
-                          <span className="text-xs px-2 py-0.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
+                          <span className="text-xs px-2 py-0.5 rounded-full bg-zinc-100 bg-zinc-800 text-zinc-600 text-zinc-400">
                             {session.duration} min
                           </span>
                         )}
                       </div>
-                      <div className="flex items-center gap-3 mt-1 text-sm text-zinc-500 dark:text-zinc-400">
+                      <div className="flex items-center gap-3 mt-1 text-sm text-zinc-500 text-zinc-400">
                         <span className="flex items-center gap-1">
                           <Calendar className="w-3.5 h-3.5" />
                           {format(new Date(session.started_at), "d 'de' MMMM", { locale: ptBR })}
@@ -105,7 +105,7 @@ export default function HistoryPage() {
                           {format(new Date(session.started_at), 'HH:mm')}
                         </span>
                       </div>
-                      <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                      <p className="text-sm text-zinc-500 text-zinc-400 mt-1">
                         {session.workout_session_exercises?.length || 0} exercícios
                       </p>
                     </div>

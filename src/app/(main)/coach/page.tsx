@@ -91,10 +91,10 @@ export default function CoachPage() {
   return (
     <div className="flex flex-col h-[calc(100vh-80px)]">
       {/* Header */}
-      <div className="p-4 border-b border-zinc-200 dark:border-zinc-800">
+      <div className="p-4 border-b border-zinc-200 border-zinc-800">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-zinc-900 dark:bg-white flex items-center justify-center">
-            <Bot className="w-5 h-5 text-white dark:text-zinc-900" />
+          <div className="w-10 h-10 rounded-full bg-zinc-900 bg-white flex items-center justify-center">
+            <Bot className="w-5 h-5 text-white text-zinc-900" />
           </div>
           <div>
             <h1 className="font-semibold">Coach IA</h1>
@@ -107,13 +107,13 @@ export default function CoachPage() {
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.length === 0 ? (
           <div className="space-y-6">
-            <Card className="bg-zinc-50 dark:bg-zinc-900 border-0">
+            <Card className="bg-zinc-50 bg-zinc-900 border-0">
               <CardContent className="py-6">
                 <div className="flex items-center gap-3 mb-3">
-                  <Sparkles className="w-5 h-5 text-zinc-900 dark:text-white" />
+                  <Sparkles className="w-5 h-5 text-zinc-900 text-white" />
                   <h3 className="font-semibold">Olá! Sou seu Coach IA</h3>
                 </div>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                <p className="text-sm text-zinc-600 text-zinc-400">
                   Posso ajudar com recomendações de treino, análise de progressão,
                   resposta a dúvidas sobre exercícios e muito mais.
                 </p>
@@ -126,7 +126,7 @@ export default function CoachPage() {
                 <button
                   key={q.label}
                   onClick={() => sendMessage(q.prompt)}
-                  className="w-full text-left p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                  className="w-full text-left p-3 rounded-lg bg-zinc-50 bg-zinc-900 hover:bg-zinc-100 hover:bg-zinc-800 transition-colors"
                 >
                   <div className="flex items-center gap-2">
                     <Lightbulb className="w-4 h-4 text-zinc-400" />
@@ -152,20 +152,20 @@ export default function CoachPage() {
                     className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
                       message.role === 'user'
                         ? 'bg-zinc-900'
-                        : 'bg-zinc-100 dark:bg-zinc-800'
+                        : 'bg-zinc-100 bg-zinc-800'
                     }`}
                   >
                     {message.role === 'user' ? (
                       <User className="w-4 h-4 text-white" />
                     ) : (
-                      <Bot className="w-4 h-4 text-zinc-900 dark:text-white" />
+                      <Bot className="w-4 h-4 text-zinc-900 text-white" />
                     )}
                   </div>
                   <div
                     className={`p-3 rounded-2xl ${
                       message.role === 'user'
                         ? 'bg-zinc-900 text-white rounded-tr-sm'
-                        : 'bg-zinc-100 dark:bg-zinc-800 rounded-tl-sm'
+                        : 'bg-zinc-100 bg-zinc-800 rounded-tl-sm'
                     }`}
                   >
                     <p className="text-sm whitespace-pre-wrap">{message.content}</p>
@@ -176,10 +176,10 @@ export default function CoachPage() {
             {loading && (
               <div className="flex justify-start">
                 <div className="flex gap-2 max-w-[85%]">
-                  <div className="w-8 h-8 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
-                    <Bot className="w-4 h-4 text-zinc-900 dark:text-white" />
+                  <div className="w-8 h-8 rounded-full bg-zinc-100 bg-zinc-800 flex items-center justify-center">
+                    <Bot className="w-4 h-4 text-zinc-900 text-white" />
                   </div>
-                  <div className="p-3 rounded-2xl bg-zinc-100 dark:bg-zinc-800 rounded-tl-sm">
+                  <div className="p-3 rounded-2xl bg-zinc-100 bg-zinc-800 rounded-tl-sm">
                     <div className="flex gap-1">
                       <span className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce" />
                       <span className="w-2 h-2 bg-zinc-400 rounded-full animate-bounce [animation-delay:0.1s]" />
@@ -195,7 +195,7 @@ export default function CoachPage() {
       </div>
 
       {/* Input */}
-      <div className="p-4 border-t border-zinc-200 dark:border-zinc-800">
+      <div className="p-4 border-t border-zinc-200 border-zinc-800">
         <div className="flex gap-2">
           <input
             type="text"
@@ -203,7 +203,7 @@ export default function CoachPage() {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
             placeholder="Digite sua pergunta..."
-            className="flex-1 h-12 px-4 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950"
+            className="flex-1 h-12 px-4 rounded-lg border border-zinc-200 border-zinc-800 bg-white bg-zinc-950"
           />
           <Button size="icon" onClick={() => sendMessage()} disabled={loading || !input.trim()}>
             <Send className="w-4 h-4" />

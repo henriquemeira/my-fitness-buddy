@@ -90,37 +90,37 @@ export default function TodayPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-zinc-900 dark:text-white">
+          <h1 className="text-2xl font-bold text-zinc-900 text-white">
             {format(today, "EEEE, d 'de' MMMM", { locale: ptBR })}
           </h1>
-          <p className="text-zinc-500 dark:text-zinc-400">Vamos treinar?</p>
+          <p className="text-zinc-500 text-zinc-400">Vamos treinar?</p>
         </div>
-        <div className="w-12 h-12 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center">
-          <Dumbbell className="w-6 h-6 text-zinc-600 dark:text-zinc-400" />
+        <div className="w-12 h-12 rounded-full bg-zinc-200 bg-zinc-800 flex items-center justify-center">
+          <Dumbbell className="w-6 h-6 text-zinc-600 text-zinc-400" />
         </div>
       </div>
 
       {/* Próximo Treino Card */}
       {nextTemplate ? (
-        <Card className="border-zinc-200 dark:border-zinc-800">
+        <Card className="border-zinc-200 border-zinc-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-base font-medium text-zinc-500 dark:text-zinc-400">
+            <CardTitle className="text-base font-medium text-zinc-500 text-zinc-400">
               Próximo Treino
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <h2 className="text-xl font-bold text-zinc-900 dark:text-white">
+              <h2 className="text-xl font-bold text-zinc-900 text-white">
                 {nextTemplate.name}
               </h2>
               {nextTemplate.description && (
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                <p className="text-sm text-zinc-500 text-zinc-400 mt-1">
                   {nextTemplate.description}
                 </p>
               )}
             </div>
             
-            <div className="flex items-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
+            <div className="flex items-center gap-4 text-sm text-zinc-500 text-zinc-400">
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
                 <span>{dayName}</span>
@@ -146,17 +146,17 @@ export default function TodayPage() {
           </CardContent>
         </Card>
       ) : (
-        <Card className="border-zinc-200 dark:border-zinc-800">
+        <Card className="border-zinc-200 border-zinc-800">
           <CardContent className="pt-6">
             <div className="text-center space-y-4">
-              <div className="w-16 h-16 rounded-full bg-zinc-100 dark:bg-zinc-800 mx-auto flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-zinc-100 bg-zinc-800 mx-auto flex items-center justify-center">
                 <Plus className="w-8 h-8 text-zinc-400" />
               </div>
               <div>
-                <h3 className="font-semibold text-zinc-900 dark:text-white">
+                <h3 className="font-semibold text-zinc-900 text-white">
                   Nenhum treino definido
                 </h3>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                <p className="text-sm text-zinc-500 text-zinc-400 mt-1">
                   Crie seu primeiro treino
                 </p>
               </div>
@@ -172,9 +172,9 @@ export default function TodayPage() {
 
       {/* Último Treino */}
       {recentSession && (
-        <Card className="border-zinc-200 dark:border-zinc-800">
+        <Card className="border-zinc-200 border-zinc-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-base font-medium text-zinc-500 dark:text-zinc-400">
+            <CardTitle className="text-base font-medium text-zinc-500 text-zinc-400">
               Última Sessão
             </CardTitle>
           </CardHeader>
@@ -184,14 +184,14 @@ export default function TodayPage() {
               className="flex items-center justify-between group"
             >
               <div>
-                <h3 className="font-semibold text-zinc-900 dark:text-white">
+                <h3 className="font-semibold text-zinc-900 text-white">
                   {(recentSession as any).workout_templates?.name || 'Treino livre'}
                 </h3>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                <p className="text-sm text-zinc-500 text-zinc-400">
                   {format(new Date(recentSession.started_at), "d 'de' MMMM", { locale: ptBR })}
                 </p>
               </div>
-              <ArrowRight className="w-5 h-5 text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300" />
+              <ArrowRight className="w-5 h-5 text-zinc-400 group-hover:text-zinc-600 group-hover:text-zinc-300" />
             </Link>
           </CardContent>
         </Card>
@@ -201,24 +201,24 @@ export default function TodayPage() {
       {templates.length > 1 && (
         <div className="space-y-3">
           <div className="flex items-center justify-between">
-            <h3 className="font-semibold text-zinc-900 dark:text-white">
+            <h3 className="font-semibold text-zinc-900 text-white">
               Meus Treinos
             </h3>
-            <Link href="/workouts" className="text-sm text-zinc-500 dark:text-zinc-400 hover:underline">
+            <Link href="/workouts" className="text-sm text-zinc-500 text-zinc-400 hover:underline">
               Ver todos
             </Link>
           </div>
           <div className="grid gap-2">
             {templates.slice(1, 4).map((template) => (
               <Link key={template.id} href={`/workouts/${template.id}`}>
-                <Card className="border-zinc-200 dark:border-zinc-800 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors">
+                <Card className="border-zinc-200 border-zinc-800 hover:bg-zinc-50 hover:bg-zinc-900 transition-colors">
                   <CardContent className="py-3">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h4 className="font-medium text-zinc-900 dark:text-white">
+                        <h4 className="font-medium text-zinc-900 text-white">
                           {template.name}
                         </h4>
-                        <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                        <p className="text-sm text-zinc-500 text-zinc-400">
                           {template.workout_template_exercises.length} exercícios
                           {template.duration && ` • ${template.duration} min`}
                         </p>
@@ -234,17 +234,17 @@ export default function TodayPage() {
       )}
 
       {/* Mensagem IA Placeholder */}
-      <Card className="border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50">
+      <Card className="border-zinc-200 border-zinc-800 bg-zinc-50 bg-zinc-900/50">
         <CardContent className="py-4">
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center flex-shrink-0">
-              <Zap className="w-4 h-4 text-zinc-600 dark:text-zinc-400" />
+            <div className="w-8 h-8 rounded-full bg-zinc-200 bg-zinc-800 flex items-center justify-center flex-shrink-0">
+              <Zap className="w-4 h-4 text-zinc-600 text-zinc-400" />
             </div>
             <div>
-              <h4 className="font-medium text-sm text-zinc-900 dark:text-white">
+              <h4 className="font-medium text-sm text-zinc-900 text-white">
                 Coach IA
               </h4>
-              <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+              <p className="text-sm text-zinc-500 text-zinc-400 mt-1">
                 Complete seu perfil para receber recomendações personalizadas.
               </p>
             </div>

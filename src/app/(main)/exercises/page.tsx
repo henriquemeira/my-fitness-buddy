@@ -61,7 +61,7 @@ export default function ExercisesPage() {
 
   return (
     <div className="p-4 space-y-6">
-      <h1 className="text-2xl font-bold text-zinc-900 dark:text-white">Exercícios</h1>
+      <h1 className="text-2xl font-bold text-zinc-900 text-white">Exercícios</h1>
 
       {/* Busca */}
       <div className="relative">
@@ -71,7 +71,7 @@ export default function ExercisesPage() {
           placeholder="Buscar exercício..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full h-12 pl-10 pr-4 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950"
+          className="w-full h-12 pl-10 pr-4 rounded-lg border border-zinc-200 border-zinc-800 bg-white bg-zinc-950"
         />
       </div>
 
@@ -84,7 +84,7 @@ export default function ExercisesPage() {
             className={`px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
               selectedMuscle === muscle
                 ? 'bg-zinc-900 text-white'
-                : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'
+                : 'bg-zinc-100 bg-zinc-800 text-zinc-600 text-zinc-400'
             }`}
           >
             {muscle}
@@ -99,11 +99,11 @@ export default function ExercisesPage() {
       ) : (
         <div className="space-y-2">
           {filteredExercises.map((exercise) => (
-            <Card key={exercise.id} className="border-zinc-200 dark:border-zinc-800">
+            <Card key={exercise.id} className="border-zinc-200 border-zinc-800">
               <CardContent className="py-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center flex-shrink-0">
-                    <Dumbbell className="w-5 h-5 text-zinc-600 dark:text-zinc-400" />
+                  <div className="w-10 h-10 rounded-lg bg-zinc-100 bg-zinc-800 flex items-center justify-center flex-shrink-0">
+                    <Dumbbell className="w-5 h-5 text-zinc-600 text-zinc-400" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h3 className="font-medium truncate">{exercise.name}</h3>
@@ -116,12 +116,12 @@ export default function ExercisesPage() {
                   </div>
                   <div className="flex gap-1 flex-shrink-0">
                     {exercise.is_compound && (
-                      <span className="px-2 py-0.5 text-xs rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
+                      <span className="px-2 py-0.5 text-xs rounded bg-zinc-100 bg-zinc-800 text-zinc-600 text-zinc-400">
                         Composto
                       </span>
                     )}
                     {exercise.is_bodyweight && (
-                      <span className="px-2 py-0.5 text-xs rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
+                      <span className="px-2 py-0.5 text-xs rounded bg-zinc-100 bg-zinc-800 text-zinc-600 text-zinc-400">
                         Peso corporal
                       </span>
                     )}
